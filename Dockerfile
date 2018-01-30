@@ -1,4 +1,4 @@
-FROM python:3.6
+FROM jupyter/minimal-notebook:latest
 
-COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install -r /tmp/requirements.txt

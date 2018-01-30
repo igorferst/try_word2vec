@@ -1,7 +1,9 @@
 version: '3'
 services:
-  nlp:
+  word2vec:
     build: .
+    ports:
+      - 8888:8888
     volumes:
-      - ./:/code
-    command: ['python', '/code/run.py']
+      - ./:/home/jovyan
+    command: ["start-notebook.sh", "--NotebookApp.token=''"]
